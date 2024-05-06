@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Phalane | Front-end developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-side">
+            <h3>Daniel.dev</h3>
+
+            <div>
+                <ul class="sidebar">
+                    <li><img  onclick=removeSideBar() src="./src/wrong.png" width="30px" alt=""></li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Project</li>
+                    <li>Contact</li>
+                    <li>Download CV</li>
+                </ul>
+            </div>
+        
+
+        </div>
+            <div class="right-side">
+            <ul>
+                <li class="hide">Home</li>
+                <li class="hide">About</li>
+                <li class="hide">Project</li>
+                <li class="hide">Contact</li>
+                <li class="hide">Download CV</li>
+                <li><img class="manu-bars" onclick=showSideBar() src="./src/bars.png" width="30px"></li>
+            </ul>
+        </div>
+        <!-- <div class="bars hidden">
+            <img src="./src/bars.png" alt="" width="30px">
+        </div> -->
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-left">
+            <span>Front End Developer</span>
+            <p>Hi, Welcome to my front-end developer portfolio.</p>
+            <p>Please do Explore my portfolio to witness </p>
+            <p>my dedication to clean code and responsive design</p>
+            
+            <div class="hire-me-wrapper">
+                <div class="hire-me">
+                    <button>Hire Me</button>
+                </div>
+            </div>
+            <div class="stack">
+               <div class="stack-left">
+                    <span>Tech stack </span>
+               </div>
+               <div class="stack-right">
+                <img src="./src/html_icon.svg" alt="" width="65px" height="65px">
+                <img src="./src/javascript_icon.svg" alt="" width="65px" height="65px">
+                <img src="./src/react_icon.svg" alt="" width="65px" height="65px">
+               </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <img src="./src/profile_picture.jpeg" alt="" width="250px" height="250px">
+        </div>
+    </div>
+    <div class="about-wrapper">
+        <div class="about-container reveal">
+            <div class="about-left">
+                <img src="./src/about_image.webp" alt="" width="410px" height="350px">
+            </div>
+            <div class="about-right">
+                <span>About Me</span>
+                <p> I'm Daniel Phalane, A passionate Developer,
+                    I specialize in crafting immersive and intuitive user
+                    experiences. Proficient in HTML, CSS, JavaScript, React
+                    and Tailwind CSS.   
+                    I taught myself how to code so that I may acquire the 
+                    ability to improve the quality of websites and to bring
+                     my ideas to life.With solid foundation in HTML and CSS,
+                     I ensure elegant and accessible user interfaces. JavaScript 
+                     fuels my desire to interactivity, enabling dynamic web solutions.
+                     React with its component-based architecture, is my playground for 
+                     building seamless, fast and user-friendly web application.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="project-container reveal">
+        <div class="project-header">
+            <span>My Projects</span>
+        </div>
+        <div class="project">
+            <div class="project-card">
+                <h3>Fitclub</h3>
+                <p>Tech Stack: <span class="technologies">React</span></p>
+                <div class="image">
+                    <img src="./src/fitclub.png" alt="" height="100px">
+                </div>
+                
+                <div class="buttons">
+                    <button>Live demo</button>
+                    <button>Code</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Job Listing</h3>
+                <p>Tech Stack: <span class="technologies">React</span> and
+                <span class="technologies">Tailwind CSS</span></p>
+                <div class="image">
+                    <img src="./src/joblisting.png" alt="" height="100px">
+                </div>
+                <p></p>
+                <div class="buttons">
+                    <button>Live demo</button>
+                    <button>Code</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Daniels Shop</h3>
+                <p>Tech Stack: <span class="technologies">React</span</p>
+                <img src="./src/Daniels Shop.png" alt="" height="100px">
+                <div class="buttons">
+                    <button>Live demo</button>
+                    <button>Code</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>SAPS Find App</h3>
+                <p>Tech Stack: <span class="technologies">Loading...</span></p>
+                <div class="placeholder">
+                    <h2>Coming soon!!</h2>
+                </div>
+                
+                <p></p>
+                <div class="buttons">
+                    <button>Live demo</button>
+                    <button>Code</button>
+            </div>
+        </div>
+
+        </div>
+
+        </div>
+        <div class="project">
+
+    </div>
+    <div class="contact-wrapper">
+        <div class="contact-section reveal">
+            <div class="contact-content">
+                <span >Contact Me</span>
+                 <p class="special">I am currently seeking for an entry-level/ part-time opportunity 
+                    where I can put my abilities to work and to grow my skill
+                     set in being a Front-End Developer and to put my creative
+                      and problem-solving skills to use.
+                 </p>
+                 <p class="special">I would love to collaborate and contribute to open-source 
+                    projects. Feel free to connect!
+                 </p>
+            </div>
+            <div class="contact-content">
+                <span>Let's Connect</span>
+                <div class="connect-apps">
+                    <div class="contact-box">
+                        <img src="./src/location.png" alt="">
+                        <div class="contact-info">
+                            <h3>Location</h3>
+                            <p>Johannesburg, South Africa</p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <img src="./src/email.png" alt="">
+                        <div class="contact-info">
+                            <h3>Mail</h3>
+                            <p>daniel.2001phetho@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-box">
+                        <img src="./src/whatsapp.png" alt="">
+                        <div class="contact-info">
+                            <h3>WhatsApp</h3>
+                            <p>+2763 609 3253</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <p>Copyright &copy; 2024.All rights are reserved</p>
+            </div>
+            <div class="footer-right">
+                <img src="./src/github.png" alt="">
+                <img src="./src/linkedin.png" alt="">
+                <img src="./src/facebook.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

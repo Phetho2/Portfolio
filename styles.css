@@ -1,0 +1,578 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: rgb(245, 243, 243);
+}
+.header-container {
+    display: flex;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 200;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 10px;
+    justify-content: space-between;
+    padding: 25px 40px 25px 50px;
+    background-color:white;
+    font-family: "Kaisei Decol", serif;
+}
+
+.right-side ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+}
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-size: cover;
+    position: relative;
+    gap: 5rem;
+    padding: 8rem 0px 4rem 0px;
+    margin: 100px 200px 0px 200px;
+    
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li {
+    list-style: none;
+    margin: 10px;
+    font-family: "Kaisei Decol", serif;
+    font-weight: bold;
+}
+.sidebar :nth-child(1) {
+    position: absolute;
+    right: 0;
+}
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    animation-name: heroMove;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+.hero-left span {
+    font-size: 3rem;
+    color:rgb(96, 96, 242);
+    font-weight: bold;
+    font-family: "Kaisei Decol", serif;
+ 
+}
+.hero-left p {
+    display: flex;
+    flex-direction: column;
+    font-family: "Kaisei Decol", serif;
+    font-size: 1rem;
+}
+.hero-right {
+    display: flex;
+    
+}
+.hero-right img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.hire-me-wrapper {
+    display: flex;
+    margin-top: 2.5rem;
+}
+.hire-me-wrapper button {
+    padding: 10px;
+    border: 2px solid rgb(96, 96, 242);
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: "Kaisei Decol", serif;
+}
+.hire-me-wrapper button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: rgb(111, 111, 247);
+}
+.stack {
+    display: flex;
+    display: none;
+    align-items: center;
+    gap:4rem;
+    margin-top: 2.5rem;
+}
+.stack-left {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+.stack-right {
+    display: flex;
+    gap: 2rem;
+}
+.stack span {
+    font-size: 1rem;
+}
+.about-container {
+    display: flex;
+    gap: 3rem;
+    margin: 200px 100px 50px 100px;
+    justify-content: center;
+    padding: 20px;
+}
+.about-wrapper {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+}
+.about-right {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 20px 20px;
+    width:max-content;
+    padding: 20px;
+    transform: scale(0.9);
+    margin-top: 4rem;
+    flex: 2;
+}
+.about-right span {
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgb(96, 96, 242);
+    margin-bottom: 20px;
+    font-family: "Kaisei Decol", serif;
+}
+.about-right p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: "Kaisei Decol", serif;
+}
+.about-left img {
+    margin-top: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 5rem;
+}
+.project-container {
+   margin-top: 5rem;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    margin-inline: 5rem;
+}
+.project-card {
+    box-shadow: 0px 142px -20px rgba(0, 0, 0 ,0.45),
+    25px 0px 20px -20px rgba(0, 0, 0 ,0.45),
+    0px 25px 20px -20px rgba(0, 0, 0 ,0.45),
+    -25px 0px 20px -20px rgba(0, 0, 0 ,0.45);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* .project-card:hover {
+    transform: scale(1.1);
+} */
+.project-card h3 {
+    font-family: "Kaisei Decol", serif;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: rgb(111, 111, 247);
+}
+.project-card p {
+    font-size: 1rem;
+    font-family: "Kaisei Decol", serif;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.project-card img {
+    width: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.buttons {
+    display: flex;
+    gap: 1rem;
+    padding: 20px;
+    justify-content: center;
+}
+.buttons button {
+    padding: 10px;
+    border: none;
+    font-family: "Kaisei Decol", serif;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.project-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.project-header span {
+    font-size: 1.5rem;
+    color: rgb(111, 111, 247);
+    font-family: "Kaisei Decol", serif;
+    font-weight: bold;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    margin: 10rem 10rem 2rem 10rem;
+    align-items: center;
+}
+.contact-wrapper {
+    background-color: rgb(255, 255, 255);
+}
+.contact-content span {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: rgb(111, 111, 247);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Kaisei Decol", serif;
+}
+.special {
+    font-size: 1.3rem;
+    margin-inline: 10rem;
+    font-family: "Kaisei Decol", serif;
+}
+.connect-apps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 2rem;
+}
+.connect-apps img {
+    width: 30px;
+}
+.hero-right {
+    animation-name: photoMove;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+
+}
+.hero-left {
+    animation-name: heroMove;
+    animation-duration: 3s;
+    animation-fill-mode: both; 
+}
+.header-container {
+    animation-name: navbar;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+.right-side :nth-child(5) {
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: none;
+}
+.buttons button:hover {
+    background-color:rgb(96, 96, 242);
+    transform: scale(1.1);
+    cursor: pointer;
+    outline:rgb(96, 96, 242) ;
+}
+.technologies {
+    color:rgb(96, 96, 242);
+}
+.right-side ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(111, 111, 247);
+}
+.right-side :nth-child(5) {
+    border: 2px solid rgb(96, 96, 242);
+    font-size: 16px;
+    padding-inline: 5px;
+    padding-block: 2px;
+    border-radius: 20px;
+    margin-top: 0px;
+}
+.contact-box {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    transform: scale(0.);
+}
+.contact-box img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: "Kaisei Decol", serif;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: "Kaisei Decol", serif;
+} 
+.contact-info h3 {
+    font-weight: bold;
+    color: rgb(111, 111, 247);
+    font-size: 1.4rem;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    padding-inline: 2rem;
+    margin-top: 5rem;
+    background-color: rgb(49, 48, 48);
+}
+.footer-right{
+    display: flex;
+    gap:1rem;
+}
+.footer-right :nth-child(2) {
+    object-fit: cover;
+}
+.footer-left {
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Kaisei Decol", serif;
+}
+.footer-right img {
+    background: white;
+    border-radius: 51px;
+    width:30px;
+    object-fit: cover;
+}
+.footer-right img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.sidebar li {
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+.manu-bars {
+    display: none;
+}
+.placeholder {
+    height: 100px;
+    align-items: center;
+    color: rgb(170, 43, 43);
+    font-family: "Kaisei Decol", serif;
+    margin-top: 20px;
+}
+@keyframes photoMove {
+    from{
+        transform: translateX(300px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+ 
+@keyframes heroMove {
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(10px);
+    }
+}
+@keyframes bounce {
+    from{
+        transform: rotateY('90 deg');
+    }
+    to{
+        transform: rotateY('0 deg');
+    }
+}
+@keyframes navbar {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width: 769px) {
+    .hide {
+        display: none;
+    }
+    .manu-bars {
+        display: block;
+    }
+
+    .about-wrapper {
+        width: 100%;
+    }
+    .about-container {
+        width: 100%;
+        margin: 100px 10px 0px 10px;
+        text-align: center;
+    }
+    .about-right p {
+        font-size: 1.3rem;
+        transform: scale(1);
+    }
+    .about-right span {
+        align-self: center;
+    }
+    .project {
+        grid-template-columns: 1fr 1fr;
+    }
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    .special {
+        width: 100%;
+        text-align: center;
+        margin-inline: 0px;
+    }
+
+    .hero-section {
+        gap: 3rem;
+        padding: 6rem 0px 2rem 0px;
+        margin: 50px 100px 0px 100px;
+    }
+    .about-left {
+        display: none;
+    }
+    .contact-wrapper {
+        width: 100%;
+    }
+    .contact-section {
+        gap: 3rem;
+        margin: 5rem 2rem 2rem 2rem;
+    }
+    .connect-apps {
+        transform: scale(0.9);
+    }
+    .contact-box {
+        transform: scale(0.8);
+    }
+  
+}
+@media screen and (max-width: 481px) {
+    .sidebar {
+        width: 100%;
+    }
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-right {
+        position: absolute;
+        top: 0;
+        margin-top: 5rem;
+    }
+    .hero-right img {
+        transform: scale(1.2);
+        margin-top: 5px;
+    }
+    .hero-left  {
+        margin-top: 10rem;
+    }
+    .hero-left span {
+        margin-top: 8rem;
+        font-size: 3.5rem;
+    }
+    .hero-left p {
+        font-size: 1.4rem;
+        margin-top: 5px;
+    }
+    .hire-me {
+        transform: scale(1.3);
+    }
+    .hero-left {
+        animation: none;
+    }
+    .hero-right {
+        animation: none;
+    }
+    .header-container {
+        animation: none;
+    }
+    .project {
+        grid-template-columns: 1fr;
+    }
+    .connect-apps {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-side h3 {
+        font-size: 1.3rem;
+    }
+    .about-container {
+        margin: 0;
+    }
+    .about-right {
+        margin: 0;
+    }
+    .about-right p {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .project-header span {
+        font-size: 2rem;
+    }
+    .project {
+        margin: 20px;
+    }
+    .connect-apps {
+        transform: scale(1.4);
+        gap: 0.3rem;
+    }
+    .connect-apps :nth-child(1) {
+        margin-top: 20px;
+    }
+    .contact-info p {
+        font-size: 1rem;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    .footer-right {
+        transform: scale(0.8);
+    }
+    .footer-right img {
+        object-fit: cover;
+    }
+
+}
