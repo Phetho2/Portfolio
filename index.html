@@ -19,11 +19,11 @@
             <div>
                 <ul class="sidebar">
                     <li><img  onclick=removeSideBar() src="./src/wrong.png" width="30px" alt=""></li>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Project</li>
-                    <li>Contact</li>
-                    <li>Download CV</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Download CV</a></li>
                 </ul>
             </div>
         
@@ -31,11 +31,11 @@
         </div>
             <div class="right-side">
             <ul>
-                <li class="hide">Home</li>
-                <li class="hide">About</li>
-                <li class="hide">Project</li>
-                <li class="hide">Contact</li>
-                <li class="hide">Download CV</li>
+                <li class="hide"><a href="#">Home</a></li>
+                <li class="hide"><a href="#about">About</a></li>
+                <li class="hide"><a href="#project">Project</a></li>
+                <li class="hide"><a href="#contact">Contact</a></li>
+                <li class="hide"><a href="#">Download CV</a></li>
                 <li><img class="manu-bars" onclick=showSideBar() src="./src/bars.png" width="30px"></li>
             </ul>
         </div>
@@ -72,7 +72,7 @@
             <img src="./src/profile_picture-removebg-preview (1).png" alt="" width="250px" height="250px">
         </div>
     </div>
-    <div class="about-wrapper">
+    <div class="about-wrapper" id="about">
         <div class="about-container reveal">
             <div class="about-left">
                 <img src="./src/about_image.webp" alt="" width="410px" height="350px">
@@ -96,66 +96,70 @@
     </div>
 
 
-    <div class="project-container reveal">
+    <div class="project-container reveal" id="project">
         <div class="project-header">
             <span>My Projects</span>
         </div>
         <div class="project">
             <div class="project-card">
-                <h3>Fitclub</h3>
-                <p>Tech Stack: <span class="technologies">React</span></p>
-                <div class="image">
-                    <img src="./src/fitclub.png" alt="" height="100px">
+                <img src="./src/fitclub.png" alt="" >
+                <div class="overlayer">
+                    <h3>Fitclub</h3>
+                    <p>Tech Stack: <span class="technologies">React</span></p>
+                    <div class="buttons">
+                        <button>Live demo</button>
+                        <button>Code</button>
+                    </div>  
                 </div>
-                
-                <div class="buttons">
-                    <button>Live demo</button>
-                    <button>Code</button>
-                </div>
+                    
+            </div>
+
+
+            <div class="project-card">
+                    <img src="./src/joblisting.png" alt="" >
+                    <div class="overlayer">
+                        <h3>Job Listing</h3>
+                        <p>Tech Stack: <span class="technologies">React</span> and
+                        <span class="technologies">Tailwind CSS</span></p>
+                        <div class="buttons">
+                            <button>Live demo</button>
+                            <button>Code</button>
+                        </div>
+                    </div>
+
             </div>
             <div class="project-card">
-                <h3>Job Listing</h3>
-                <p>Tech Stack: <span class="technologies">React</span> and
-                <span class="technologies">Tailwind CSS</span></p>
-                <div class="image">
-                    <img src="./src/joblisting.png" alt="" height="100px">
-                </div>
-                <p></p>
-                <div class="buttons">
-                    <button>Live demo</button>
-                    <button>Code</button>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Daniels Shop</h3>
-                <p>Tech Stack: <span class="technologies">React</span</p>
                 <img src="./src/Daniels Shop.png" alt="" height="100px">
-                <div class="buttons">
-                    <button>Live demo</button>
-                    <button>Code</button>
+                <div class="overlayer">
+                    <h3>Daniels Shop</h3>
+                    <p>Tech Stack: <span class="technologies">React</span</p>
+                    <div class="buttons">
+                        <button>Live demo</button>
+                        <button>Code</button>
+                    </div>
                 </div>
+
             </div>
             <div class="project-card">
-                <h3>SAPS Find App</h3>
-                <p>Tech Stack: <span class="technologies">Loading...</span></p>
                 <div class="placeholder">
+                    <h3>SAPS Find App</h3>
                     <h2>Coming soon!!</h2>
                 </div>
-                
-                <p></p>
-                <div class="buttons">
-                    <button>Live demo</button>
-                    <button>Code</button>
+                <div class="overlayer">
+                    <p>Tech Stack: <span class="technologies">Loading...</span></p>
+                    <div class="buttons">
+                        <button>Live demo</button>
+                        <button>Code</button>
+                </div>
+
             </div>
         </div>
 
         </div>
 
         </div>
-        <div class="project">
-
-    </div>
-    <div class="contact-wrapper">
+        
+    <div class="contact-wrapper" id="contact">
         <div class="contact-section reveal">
             <div class="contact-content">
                 <span >Contact Me</span>
